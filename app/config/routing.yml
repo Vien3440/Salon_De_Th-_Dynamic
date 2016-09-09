@@ -1,3 +1,5 @@
-app:
-    resource: "@AppBundle/Controller/"
+site_internet:
+    resource: "@SiteInternetBundle/Controller/"
     type:     annotation
+    prefix:   /
+
