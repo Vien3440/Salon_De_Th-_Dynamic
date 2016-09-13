@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    {% block head %}
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')}}"> {# Import Bootstrap(Composeur#}
+        <link rel="stylesheet" href="{{ asset('bundles/framework/css/main.css')}}"> 
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+    {% endblock %}  
+
+    {% block body %}
+    {% block nav %}  {# Nav bar par default #}
+        <nav class="nav1 navbar navbar-default navbar-fixed-top">
+            <ul>
+                <li>Salon de thé</li>
+                <li>Gateaux</li>
+                <li>Evenement</li>
+                <li>Contact</li>
+            </ul>
+            <img src="./css/img/dessin-the.svg" alt="logo">
+            <ul class="contact">
+                <li>N°0612345678</li>
+                <li>Rue de la liberation</li>
+            </ul>
+        </nav>
+    {% endblock %}
+
+    {% block corp %}{% endblock %} {# Contenue changent  #}
+
+
+        <script type="text/javascript" src="{{asset('../vendor/twbs/bootstrap/js/tests/vendor/jquery.min.js')}}"></script> {# Import jquery(Composeur#}
+        <script type="text/javascript" src="{{asset('../vendor/twbs/bootstrap/dist/js/bootstrap.min.js')}}"></script> {# Import BootstrapJs(Composeur#}
+    {% endblock %}
+
+
 </html>
