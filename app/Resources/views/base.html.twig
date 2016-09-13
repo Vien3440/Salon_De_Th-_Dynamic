@@ -2,6 +2,7 @@
 <html>
     {% block head %}
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')}}"> {# Import Bootstrap(Composeur#}
         <link rel="stylesheet" href="{{ asset('bundles/framework/css/main.css')}}"> 
@@ -24,12 +25,12 @@
             </ul>
         </nav>
     {% endblock %}
-
-    {% block corp %}{% endblock %} {# Contenue changent  #}
-
-
+    
         <script type="text/javascript" src="{{asset('../vendor/twbs/bootstrap/js/tests/vendor/jquery.min.js')}}"></script> {# Import jquery(Composeur#}
         <script type="text/javascript" src="{{asset('../vendor/twbs/bootstrap/dist/js/bootstrap.min.js')}}"></script> {# Import BootstrapJs(Composeur#}
+        <script type="text/javascript" src="{{asset('./bundles/framework/js/scriptNav.js')}}"></script>  
+    {% block corp %}{% endblock %} {# Contenue changent  #}
+         
     {% endblock %}
 
 
