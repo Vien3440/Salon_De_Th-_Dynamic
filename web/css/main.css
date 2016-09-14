@@ -1,0 +1,73 @@
+#headerHome {
+  /*  Img de garde  */
+  background: url("../images/patisseries-sobre.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+
+
+#tof {
+  height: 500px;
+  background-color: red; }
+
+#text {
+  height: 500px;
+  background-color: gold; }
+
+/*----------NavBar---------*/
+.navbar-default {
+  /* Bar de nav/header initiale ******/
+  font-size: 30px;
+  opacity: 0.8;
+  padding: 45px; }
+
+.navbar-default.bigcontent {
+  /* Bar de nav* *****/
+  font-size: 25px;
+  padding: 0px;
+  background-color: white;
+  opacity: 1;
+  transition: all 0.5s ease-in-out; }
+
+.navbar-default > :first-child {
+  /* Bouton menu ******/
+  padding: 0px;
+  display: flex;
+  float: right;
+  width: 50%;
+  justify-content: space-around;
+  margin: 2%;
+  list-style: none; }
+
+.contact {
+  float: right;
+  position: absolute;
+  top: 31px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 87px;
+  list-style: none; }
+
+.contact.cache {
+  /*cache contact de la navbar********/
+  visibility: hidden; }
+
+img {
+  height: 50px;
+  margin-left: 379px;
+  height: 146px;
+  position: absolute;
+  top: 15px; }
+
+img.logoNav {
+  transition: all 0.5s ease-in-out;
+  margin-left: 0px;
+  height: 95px;
+  position: absolute;
+  top: -5px; }
+
+/*# sourceMappingURL=main.css.map */
