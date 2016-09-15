@@ -1,110 +1,123 @@
 
 
-/*----------NavBar---------*/
+/*--------------------------NavBar-------------------------*/
 
-.navbar-default{  /* Bar de nav/header initiale ******/
-    font-family: baseBold;
-    font-size: 30px;
-    opacity: 0.8;
-    padding: 45px;  
- 
-}
- 
-.navbar-default.bigcontent{ /* Bar de nav* *****/
+.nav1{
+    border:0px;
     
-        font-size: 25px;
-        padding: 0px;
-        background-color: white;
-        opacity: 1 ;
+}
 
-        transition: all 0.5s ease-in-out;
+.navbar-default{  // Bar de nav/header
+                  
+                  background-color:$color4!important;
+                  color: $color2;
+                  font-family: baseBold;
+                  font-size: 30px;
+                  opacity: 0.8;
+                  padding: 45px;  
+
+}
+
+.nav-link{
+    color: $color2 !important;
+}
+.nav1{
+    border:0px;
+}
+
+.navbar-default.bigcontent{ // Bar de nav
+
+                            font-size: 25px;
+                            padding: 0px;
+                            background-color: white;
+                            opacity: 1 ;
+
+                            transition: all 0.5s ease-in-out;
 
 
-	    
+
 }
 
 
- .navbar-default > :first-child{ /* Bouton menu ******/
-     padding: 0px;
-     display: flex ;
-     float: right;
-     width: 10px;
-     justify-content: space-around;
-     margin: 2%;
-     list-style: none;
-     
- }
- 
- ul.nav.navbar-nav {
+.navbar-default > :first-child{ // Bouton menu 
+                                padding: 0px;
+                                display: flex ;
+                                float: right;
+                                width: 10px;
+                                justify-content: space-around;
+                                margin: 2%;
+                                list-style: none;
+
+}
+
+ul.nav.navbar-nav {
     float: right;
-    
-}
- 
- .contact{
-     float: right;
-    position: absolute;
-    top: 10px;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 87px;
-    list-style: none;
-   font-family: base;
- }
 
- .contact.cache{/*cache contact de la navbar********/
-     visibility: hidden;
-     
- }
- 
- img{
+}
+
+.contact{ //positionne le num de tel et adresse contact de la navba
+          float: right;
+          position: absolute;
+          top: 10px;
+          margin: 0px;
+          padding: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 87px;
+          list-style: none;
+          font-family: base;
+}
+
+.contact.cache{//cache le num de tel et adresse contact de la navbar
+               visibility: hidden;
+
+}
+
+nav img{ // logo dans le header
      height: 50px;
-    margin-left: 379px;
-    height: 146px;
-    position: absolute;
-    top: 15px;
- }
- 
- img.logoNav{
-     transition: all 0.5s ease-in-out;
-    margin-left: 0px;
-    height: 95px;
-    position: absolute;
-    top: -5px;
+     margin-left: 379px;
+     height: 146px;
+     position: absolute;
+     top: 15px;
+}
 
- }
- 
- @media  screen and (min-width: 768px){
-     .navbar-collapse.collapse {
-    display: none!important; }
-     
+img.logoNav{ // logo dans la Nav
+             transition: all 0.5s ease-in-out;
+             margin-left: 0px;
+             height: 95px;
+             position: absolute;
+             top: -5px;
+
+}
+
+@media  screen and (min-width: 768px){
+    .navbar-collapse.collapse { // cache les sections de la Nav en header
+                                display: none!important; }
+
     .bigcontent .navbar-collapse.collapse {
-    display: block!important;     
-     }
- }
-
-@media  screen and (min-width: 1150px){
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
-    padding-right: 0;
-    padding-left: 0;
+        display: block!important;     
+    }
 }
 
-.navbar-collapse.collapse {
-    display: block!important;
-    height: auto!important;
-    padding-bottom: 0;
-    overflow: visible!important;
-}
+@media  screen and (min-width: 1150px){ // Dimention avent pasage en collapse
+                                        .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+                                            padding-right: 0;
+                                            padding-left: 0;
+                                        }
 
-.navbar-collapse {
-    
-    width: auto;
-    border-top: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+                                        .navbar-collapse.collapse {
+                                            display: block!important;
+                                            height: auto!important;
+                                            padding-bottom: 0;
+                                            overflow: visible!important;
+                                        }
 
+                                        .navbar-collapse {
 
+                                            width: auto;
+                                            border-top: 0;
+                                            -webkit-box-shadow: none;
+                                            box-shadow: none;
+                                        }
 }

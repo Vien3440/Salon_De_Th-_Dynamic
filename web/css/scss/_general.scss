@@ -1,7 +1,13 @@
+/*____________________________Couleur_______________________________*/
+$color1:#ffcc88;
 
+$color2:#f4a32e;
 
+$color3:#fa482e;
 
+$color4:#097168;
 
+/*____________________________Fonts_______________________________*/
 @font-face {
     font-family: base;
     src: url(../../web/fonts/Cantarell-Regular.ttf);
@@ -11,3 +17,12 @@
     font-family: baseBold;
     src: url(../../web/fonts/Cantarell-Bold.ttf);
 }
+
+/*____________________________BorderShadoow_______________________________*/
+@mixin borderShadoow {  // Pour l'apeller --> @include borderShadoow; 
+  -webkit-box-shadow: -2px 4px 22px 11px rgba(0,0,0,0.34);
+        -moz-box-shadow: -2px 4px 22px 11px rgba(0,0,0,0.34);
+        box-shadow: -2px 4px 22px 11px rgba(0,0,0,0.34);
+}
+
+ 

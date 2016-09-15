@@ -1,34 +1,62 @@
+/*____________________________Couleur_______________________________*/
+/*____________________________Fonts_______________________________*/
 @font-face {
   font-family: base;
   src: url(../../web/fonts/Cantarell-Regular.ttf); }
 @font-face {
   font-family: baseBold;
   src: url(../../web/fonts/Cantarell-Bold.ttf); }
-#headerHome {
-  /*  Img de garde  */
-  background: url("../images/patisseries-sobre.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+/*____________________________BorderShadoow_______________________________*/
+body {
+  background-color: #f4a32e; }
+  body #headerHome {
+    /*  Img de garde  */
+    background: url("../images/patisseries-sobre.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body .container {
+    -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    padding: 0px; }
+    body .container #tof {
+      background-color: #fa482e; }
+      body .container #tof div {
+        -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        text-align: center;
+        margin-top: 50%;
+        width: 200px;
+        margin: auto;
+        font-family: base; }
+        body .container #tof div img {
+          height: 300px;
+          position: inherit; }
+  body #text {
+    height: 500px;
+    background-color: #ffcc88; }
 
-#tof {
-  height: 500px;
-  background-color: red; }
+/*--------------------------NavBar-------------------------*/
+.nav1 {
+  border: 0px; }
 
-#text {
-  height: 500px;
-  background-color: gold; }
-
-/*----------NavBar---------*/
 .navbar-default {
-  /* Bar de nav/header initiale ******/
+  background-color: #097168 !important;
+  color: #f4a32e;
   font-family: baseBold;
   font-size: 30px;
   opacity: 0.8;
   padding: 45px; }
 
+.nav-link {
+  color: #f4a32e !important; }
+
+.nav1 {
+  border: 0px; }
+
 .navbar-default.bigcontent {
-  /* Bar de nav* *****/
   font-size: 25px;
   padding: 0px;
   background-color: white;
@@ -36,7 +64,6 @@
   transition: all 0.5s ease-in-out; }
 
 .navbar-default > :first-child {
-  /* Bouton menu ******/
   padding: 0px;
   display: flex;
   float: right;
@@ -62,10 +89,9 @@ ul.nav.navbar-nav {
   font-family: base; }
 
 .contact.cache {
-  /*cache contact de la navbar********/
   visibility: hidden; }
 
-img {
+nav img {
   height: 50px;
   margin-left: 379px;
   height: 146px;

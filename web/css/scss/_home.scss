@@ -1,16 +1,46 @@
-#headerHome{    /*  Img de garde  */ 
-    background: url("../images/patisseries-sobre.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
+
+body{
+    background-color:$color2;
+
+    #headerHome{    /*  Img de garde  */ 
+        background: url("../images/patisseries-sobre.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .container{
+       @include borderShadoow;
+       padding:0px;
+        #tof{
+            background-color:$color3;
+
+
+            div{
+               @include borderShadoow;
+                text-align: center;
+                margin-top: 50%;
+                width:200px;
+                margin: auto;
+                font-family: base;
+
+
+                img{
+                    height: 300px;
+                    position:inherit;
+                }
+
+            }
+        }
+    }
+
+    #text{
+        height:500px;
+        background-color:$color1;
+
+    }
+
 }
 
-#tof{
-    height: 500px;
-    background-color: red;
-}
-
-#text{
-    height:500px;
-    background-color:gold;
-}
