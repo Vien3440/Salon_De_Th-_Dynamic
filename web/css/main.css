@@ -35,8 +35,14 @@ body {
           height: 300px;
           position: inherit; }
   body #text {
-    height: 500px;
-    background-color: #ffcc88; }
+    background-color: #ffcc88;
+    padding-top: 265px; }
+    body #text div {
+      text-align: center;
+      margin-top: 50%;
+      margin: auto;
+      font-family: baseBold;
+      font-size: 30px; }
 
 /*--------------------------NavBar-------------------------*/
 .nav1 {
