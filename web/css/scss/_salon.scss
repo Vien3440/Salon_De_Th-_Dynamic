@@ -1,0 +1,35 @@
+#styleAnnonce{
+
+    :only-child{
+        font-size: 20px;
+     font-family: base;
+     border: 30px solid $color1;  
+     border-radius: 10px;
+    height: 450px;
+    background: $color3;
+    padding:  10px;
+    text-align: center;
+    @include borderShadoow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    :first-child{
+       font-family: baseBold;
+       font-size: 30px;
+    }
+    }
+        
+};
+
+#contSalon{
+    margin-top: 110px;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-control.right {
+    background-image: none;
+}

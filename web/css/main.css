@@ -7,43 +7,6 @@
   font-family: baseBold;
   src: url(../../web/fonts/Cantarell-Bold.ttf); }
 /*____________________________BorderShadoow_______________________________*/
-body {
-  background-color: #f4a32e; }
-  body #headerHome {
-    /*  Img de garde  */
-    background: url("../images/patisseries-sobre.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; }
-  body .container {
-    -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-    box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-    padding: 0px; }
-    body .container #tof {
-      background-color: #fa482e; }
-      body .container #tof div {
-        -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-        -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-        box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-        text-align: center;
-        margin-top: 50%;
-        width: 200px;
-        margin: auto;
-        font-family: base; }
-        body .container #tof div img {
-          height: 300px;
-          position: inherit; }
-  body #text {
-    background-color: #ffcc88;
-    padding-top: 265px; }
-    body #text div {
-      text-align: center;
-      margin-top: 50%;
-      margin: auto;
-      font-family: baseBold;
-      font-size: 30px; }
-
 /*--------------------------NavBar-------------------------*/
 .nav1 {
   border: 0px; }
@@ -133,5 +96,69 @@ img.logoNav {
     border-top: 0;
     -webkit-box-shadow: none;
     box-shadow: none; } }
+body {
+  background-color: #f4a32e; }
+  body #headerHome {
+    /*  Img de garde  */
+    background: url("../images/patisseries-sobre.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  body #contHome {
+    -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+    padding: 0px; }
+    body #contHome #tof {
+      background-color: #fa482e; }
+      body #contHome #tof div {
+        -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+        text-align: center;
+        margin-top: 50%;
+        width: 200px;
+        margin: auto;
+        font-family: base; }
+        body #contHome #tof div img {
+          height: 300px;
+          position: inherit; }
+  body #text {
+    background-color: #ffcc88;
+    padding-top: 265px; }
+    body #text div {
+      text-align: center;
+      margin-top: 50%;
+      margin: auto;
+      font-family: baseBold;
+      font-size: 30px; }
+
+#styleAnnonce :only-child {
+  font-size: 20px;
+  font-family: base;
+  border: 30px solid #ffcc88;
+  border-radius: 10px;
+  height: 450px;
+  background: #fa482e;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+  box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  #styleAnnonce :only-child :first-child {
+    font-family: baseBold;
+    font-size: 30px; }
+
+#contSalon {
+  margin-top: 110px; }
+
+.carousel-control.left {
+  background-image: none; }
+
+.carousel-control.right {
+  background-image: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,11 +6,11 @@ $(document).ready(function () {
 
             $('.navbar-default').addClass("bigcontent");/*Aplique les classes****/
             $('.contact').addClass("cache");
-            $('img').addClass("logoNav");
+            $('#logo').addClass("logoNav");
         } else {
             $('.navbar-default').removeClass("bigcontent");
             $('.contact').removeClass("cache");
-            $('img').removeClass("logoNav");
+            $('#logo').removeClass("logoNav");
         }
 
     });
