@@ -1,4 +1,4 @@
-#styleAnnonce{
+.styleAnnonce{
 
     :only-child{
         font-size: 20px;
@@ -9,7 +9,7 @@
     background: $color3;
     padding:  10px;
     text-align: center;
-    @include borderShadoow;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,7 +19,9 @@
        font-size: 30px;
     }
     }
-        
+    .styleAnnoncee:nth-child(even){
+        @include borderShadoow;
+    }
 };
 
 #contSalon{

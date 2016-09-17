@@ -18,19 +18,22 @@ class ViewController extends Controller
     {
         return ;
     }
+    
     /**
      * @Route("salon")
      * @Template("SiteInternetBundle::salondethe.html.twig")
      */
     public function getSalon() {
+        
+        // Appel de l'entity
          $em = $this->getDoctrine()->getEntityManager();
         $rsm = new ResultSetMappingBuilder($em);
         $rsm->addRootEntityFromClassMetadata('AdminBundle:Salon', 'black');
         $query = $em->createNativeQuery("select * from salon", $rsm);
         $niouzes = $query->getResult();
-        return array('poste' => $niouzes);
-        
+        return array('poste' => $niouzes);    
     }
+    
     /**
      * @Route("/patisserie")
      * @Template("SiteInternetBundle::patisserie.html.twig")
@@ -38,6 +41,16 @@ class ViewController extends Controller
     public function getPati() {
         
     }
+    
+    /**
+     * @Route("/restauration")
+     * @Template("SiteInternetBundle::restauration.html.twig")
+     */
+    public function getRestauration() {
+        
+    }
+    
+    
     /**
      * @Route("/contact")
      * @Template("SiteInternetBundle::contact.html.twig")
