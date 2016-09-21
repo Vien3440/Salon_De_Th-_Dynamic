@@ -171,4 +171,15 @@ body {
 .carousel-control.right {
   background-image: none; }
 
+#admiSalon {
+  margin-top: 200px; }
+
+.salonListe {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2%;
+  margin-top: 10px;
+  background-color: #ffcc88; }
+
 /*# sourceMappingURL=main.css.map */

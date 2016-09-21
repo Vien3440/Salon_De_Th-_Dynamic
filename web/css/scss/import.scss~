@@ -2,4 +2,3 @@
 @import "template";
 @import "home";
 @import "salon";
-@import "adminSalon";
