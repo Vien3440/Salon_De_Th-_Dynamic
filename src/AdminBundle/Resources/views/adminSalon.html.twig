@@ -29,12 +29,12 @@
         <div id="salonListeBox">
         {% for Salon in salons %}
          <div class="salonListe">
+             <img src="{{asset('../web/images/')~Salon.Photo}}">
            <p>{{Salon.Nom}}</p>
            <p>{{Salon.Prix}}</p>
-           <p>{{Salon.Photo}}</p>
            <p>{{Salon.Type}}</p>
            <div>
-               <a>Supprimer</a> <a>Modifier</a>
+               <a href=" {{ path('suprSalon', {'id':Salon.id})}}">Supprimer</a> <a>Modifier</a>
            </div>
          </div>
         </div>

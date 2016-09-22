@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <title>Doctyrine News</title>
     <h2>Page ajour</h2>
-        {{form_start(formNews,{'attr':{'action':path('valid')}})}}
-    
-        {{form_rest(formNews)}}
-                
+   {# <form action="http://merdia" enctype="multipart/from-data">
+        
+    </form>#}
+        {{form_start(formNews,{'attr':{'action':path('valid'),'enctype':'multipart/form-data'}})}}
+            
         {{form_end(formNews)}}
     </head>
     <body>

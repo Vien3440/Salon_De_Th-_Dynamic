@@ -24,7 +24,7 @@ class AdminSalonController extends Controller {
     
     /**
      * @Route("/admin/salon/add", name="adminSalonAdd")
-     * @Template("AdminBundle::adminSalonModif.html.twig")
+     * @Template("AdminBundle::adminSalonAdd.html.twig")
      */
     public function addSalon() {
         
@@ -36,10 +36,14 @@ class AdminSalonController extends Controller {
      * @Route("/admin/salon/get", name="valid")
      */
     public function getSalon(Request $request) {
+        
         $salon = new Salon();
+        
          $f = $this->createForm(SalonType::class,$salon);
          $f->handleRequest($request);
-         
+         $nomDuFichier = md5(uniqid()).'.'.$salon->getPhoto()->getClientOriginalExtension();
+         $salon->getPhoto()->move('../web/images',$nomDuFichier);
+         $salon->setPhoto($nomDuFichier);
          $em = $this->getDoctrine()->getManager();
          $em->persist($salon);
          $em->flush();
@@ -47,7 +51,21 @@ class AdminSalonController extends Controller {
           return $this->redirect($this->generateUrl('adminSalon'));
           
     }  
+    /**
+     * 
+     * @Route("/admin/salon/delete/{id}", name="suprSalon")
+     */
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getEntityManager();
+        $recupId = $em->find("AdminBundle:Salon", $id);
+        $em->remove($recupId);
+        $em->flush();
+        return $this->redirect($this->generateUrl('adminSalon'));
+    }
+
+        
+    }
     
-  }
+
   
      

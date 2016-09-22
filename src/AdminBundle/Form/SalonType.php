@@ -3,6 +3,7 @@
 namespace AdminBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -18,7 +19,7 @@ class SalonType extends AbstractType
         $builder
             ->add('nom')
             ->add('prix')
-            ->add('photo')
+            ->add('photo',FileType::class)
             ->add('type')
             ->add('Valider',SubmitType::class)
         ;

@@ -3,6 +3,8 @@
 namespace AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints\File;
 
 /**
  * Salon
@@ -36,9 +38,10 @@ class Salon
     private $prix;
 
     /**
-     * @var string
+     * @var UploadedFile
      *
      * @ORM\Column(name="Photo", type="string", length=255)
+     * @File(mimeTypes={"image/jpg"})
      */
     private $photo;
 
@@ -46,6 +49,7 @@ class Salon
      * @var string
      *
      * @ORM\Column(name="Type", type="string", length=255)
+     * 
      */
     private $type;
 
