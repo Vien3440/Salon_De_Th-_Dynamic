@@ -142,34 +142,13 @@ body {
       font-family: baseBold;
       font-size: 30px; }
 
-.styleAnnonce :only-child {
-  font-size: 20px;
-  font-family: base;
-  border: 30px solid #ffcc88;
-  border-radius: 10px;
-  height: 450px;
-  background: #fa482e;
-  padding: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-  .styleAnnonce :only-child :first-child {
-    font-family: baseBold;
-    font-size: 30px; }
-.styleAnnonce .styleAnnoncee:nth-child(even) {
-  -webkit-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
-  box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34); }
+/*carousel*/
+#containerSalon {
+  margin-top: 70px; }
 
+/*carouselThumbnail*/
 #contSalon {
-  margin-top: 110px; }
-
-.carousel-control.left {
-  background-image: none; }
-
-.carousel-control.right {
-  background-image: none; }
+  margin-top: 170px; }
 
 #admiSalon {
   margin-top: 200px; }

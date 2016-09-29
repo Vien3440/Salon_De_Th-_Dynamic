@@ -31,8 +31,13 @@ class ViewController extends Controller
         $rsm->addRootEntityFromClassMetadata('AdminBundle:Salon', 'black');
         $query = $em->createNativeQuery("select * from salon", $rsm);
         $niouzes = $query->getResult();
-        return array('poste' => $niouzes);    
+        return array('poste' => $niouzes);   
+        
+        
+        
     }
+    
+    
     
     /**
      * @Route("/patisserie")
