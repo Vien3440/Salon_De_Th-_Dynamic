@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  */
 class AdminRestaurationController extends Controller{
     /**
-     * @Route("/admin/salon",name="adminResto")
+     * @Route("/admin/resto",name="adminResto")
      * @Template("AdminBundle::adminResto.html.twig")
      * 
      */
