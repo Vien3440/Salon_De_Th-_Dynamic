@@ -53,6 +53,15 @@ class ViewController extends Controller
      */
     public function getRestauration() {
         
+            // Appel de l'entity
+         $em = $this->getDoctrine()->getEntityManager();
+        $rsm = new ResultSetMappingBuilder($em);
+        $rsm->addRootEntityFromClassMetadata('AdminBundle:Resto', 'gg');
+        $query = $em->createNativeQuery("select * from resto", $rsm);
+        $niouzes = $query->getResult();
+        return array('resto' => $niouzes);   
+        
+        
     }
     
     
