@@ -48,7 +48,7 @@ class ViewController extends Controller
     }
     
     /**
-     * @Route("/restauration")
+     * @Route("/resto")
      * @Template("SiteInternetBundle::restauration.html.twig")
      */
     public function getRestauration() {

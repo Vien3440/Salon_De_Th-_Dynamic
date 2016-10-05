@@ -16,15 +16,14 @@
             </header>
             <ul class="contact">
                 <img id="logo" src="./../images/large_fun-in-the-sun-title.png" alt="logo">
-                <li>Quelle section</li>
-                <li>Modif ?</li>
+                <li>Ajouter ou Supprimer des Cocktails</li>
             </ul>
         </nav>
     {% endblock %}
     
     
     {% block corp %}
-        <h2 id="admiSalon">Liste des cocktail/Thé</h2>
+        <h2 id="admiSalon">Liste des cocktails/Thé</h2>
         <a href="{{ path('adminSalonAdd')}}"> Ajout </a>
         <div id="salonListeBox">
         {% for Salon in salons %}
@@ -34,7 +33,7 @@
            <p>{{Salon.Prix}}</p>
            <p>{{Salon.Type}}</p>
            <div>
-               <a href=" {{ path('suprSalon', {'id':Salon.id})}}">Supprimer</a> <a>Modifier</a>
+               <a href=" {{ path('suprSalon', {'id':Salon.id})}}">Supprimer</a>
            </div>
          </div>
         </div>

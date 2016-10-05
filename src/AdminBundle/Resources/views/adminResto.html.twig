@@ -1,1 +1,41 @@
-{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+
+{% block nav %}  
+        <nav class="nav1 navbar navbar-default navbar-fixed-top">
+            <button type="button" class="navbar-toggle icon-bar" data-toggle="collapse" id="inputResponsive" data-target="#myNavbar">
+
+            </button>
+            <header class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Salon de thé</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gateaux</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Restauration</a></li>
+                </ul>
+            </header>
+            <ul class="contact">
+                <img id="logo" src="./../images/large_fun-in-the-sun-title.png" alt="logo">
+                <li>Ajouter et Supprimer des Plats</li>
+            </ul>
+        </nav>
+    {% endblock %}
+    
+    
+    {% block corp %}
+        <h2 id="admiSalon">Liste des Plats</h2>
+        <a href="{{ path('adminRestoAdd')}}"> Ajout </a>
+        <div id="salonListeBox">
+        {% for Resto in resto %}
+         <div class="salonListe">
+             <img src="{{asset('../web/images/')~Resto.Photo}}">
+           <p>{{Resto.Nom}}</p>
+           <p>{{Resto.Prix}}</p>
+           <p>{{Resto.Type}}</p>
+           <div>
+               <a href=" {{ path('suprResto', {'id':Resto.id})}}">Supprimer</a>
+           </div>
+         </div>
+        </div>
+        {% endfor %}
+    {% endblock %}

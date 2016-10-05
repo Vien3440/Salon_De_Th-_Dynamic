@@ -8,8 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-class SalonType extends AbstractType
+class RestoType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -19,8 +18,8 @@ class SalonType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('prix')
             ->add('photo',FileType::class)
+            ->add('prix')
             ->add('type')
             ->add('Valider',SubmitType::class)
         ;
@@ -32,7 +31,7 @@ class SalonType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AdminBundle\Entity\Salon'
+            'data_class' => 'AdminBundle\Entity\Resto'
         ));
     }
 }
