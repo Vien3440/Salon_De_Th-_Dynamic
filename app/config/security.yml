@@ -1,24 +1,47 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
 security:
-
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        
     providers:
         in_memory:
-            memory: ~
-
+            memory: 
+                users:
+                    admin:
+                        password: 12345
+                        roles: 'ROLE_ADMIN'
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
+        
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        main:
-            anonymous: ~
-            # activate different ways to authenticate
-
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+        main:     
+            pattern : ^/
+            anonymous: true
+            provider: in_memory
+            form_login:
+                check_path: loginCheck
+                login_path: login
+            logout:
+                path: loginOut
+                target: /
+                
+        admin:
+            pattern: ^/admin
+            anonymous: false
+            provider: in_memory
+            # le formulaire de login pour que symfony sache où il campe
+            form_login:
+                check_path: loginCheck
+                login_path: login
+            logout:
+                path: loginOut
+                target: /
+                
+    encoders:
+        Symfony\Component\Security\Core\User\User:  plaintext
+        AppBundle\Entity\User:
+            algorithm: plaintext
+            ignore_case: false     
+   

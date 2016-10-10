@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ViewController extends Controller
 {
     /**
-     * @Route("/home")
+     * @Route("/home",name="home")
      * @Template("SiteInternetBundle::home.html.twig")
      * 
      */
@@ -20,7 +20,7 @@ class ViewController extends Controller
     }
     
     /**
-     * @Route("salon")
+     * @Route("salon",name="salon")
      * @Template("SiteInternetBundle::salondethe.html.twig")
      */
     public function getSalon() {
@@ -40,7 +40,7 @@ class ViewController extends Controller
     
     
     /**
-     * @Route("/patisserie")
+     * @Route("/patisserie",name="patisserie")
      * @Template("SiteInternetBundle::patisserie.html.twig")
      */
     public function getPati() {
@@ -48,7 +48,7 @@ class ViewController extends Controller
     }
     
     /**
-     * @Route("/resto")
+     * @Route("/resto",name="resto")
      * @Template("SiteInternetBundle::restauration.html.twig")
      */
     public function getRestauration() {
