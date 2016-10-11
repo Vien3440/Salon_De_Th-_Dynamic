@@ -15,28 +15,33 @@
                 </ul>
             </header>
             <ul class="contact">
-                <img id="logo" src="./../images/large_fun-in-the-sun-title.png" alt="logo">
-                <li>Ajouter ou Supprimer des Cocktails</li>
+                <li>Gestion des Cocktails</li>
             </ul>
         </nav>
     {% endblock %}
     
     
     {% block corp %}
+        
         <h2 id="admiSalon">Liste des cocktails/Thé</h2>
-        <a href="{{ path('adminSalonAdd')}}"> Ajout </a>
-        <div id="salonListeBox">
+        <a href="{{ path('adminSalonAdd')}}" class="btn btn-default" role="button"> Ajouter </a>
+        <div id="container">
+            
+            
         {% for Salon in salons %}
-         <div class="salonListe">
+            <div class="col-sm-6 col-lg-4 col-md-4">
+   <div class="thumbnail">
              <img src="{{asset('../web/images/')~Salon.Photo}}">
            <p>{{Salon.Nom}}</p>
            <p>{{Salon.Prix}}</p>
            <p>{{Salon.Type}}</p>
            <div>
                <a href="{{ path('editSalon',{'id':Salon.id})}}" class="btn btn-success" role="button">Modif</a>
-               <a href=" {{ path('suprSalon', {'id':Salon.id})}}">Supprimer</a>
+               <a href=" {{ path('suprSalon', {'id':Salon.id})}}" class="btn btn-danger" role="button">Supprimer</a>
            </div>
-         </div>
+        </div>
+        </div>
+        
         </div>
         {% endfor %}
     {% endblock %}

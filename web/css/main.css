@@ -150,14 +150,17 @@ body {
 #contSalon {
   margin-top: 170px; }
 
+#thumbnailSalon div div img {
+  height: 300px; }
+#thumbnailSalon div div div {
+  height: 300px; }
+
 #admiSalon {
   margin-top: 200px; }
 
 .salonListe {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  padding: 2%;
   margin-top: 10px;
   background-color: #ffcc88; }
 
