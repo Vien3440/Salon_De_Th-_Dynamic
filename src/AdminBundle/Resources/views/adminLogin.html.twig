@@ -29,12 +29,14 @@
     {% else %}
     
     
-        <div class="thumbnail">      
+        <div class="thumbnail"> 
+            <div class="container">
             <form action="{{path('loginCheck')}}" method="post">
                 <input type="text" id="username" name="_username" placeholder="Nom d'utilisateur" value=""/>
                 <input type="password" id="password" name="_password" placeholder="Mot de passe" value=""/>
-                <input type="submit" value="se connecter"/>
+                <button type="submit" id="login-button" value="se connecter"/>Login</button>
             </form>
+        </div>
         </div>
     
             {% endif %}
