@@ -87,9 +87,6 @@ class AdminSalonController extends Controller {
         $em = $this->getDoctrine()->getManager();
         $a = $em->find("AdminBundle:Salon", $id);
         
-         $nomDuFichier = md5(uniqid()).'.'.$a->getPhoto()->getClientOriginalExtension();
-         $a->getPhoto()->move('../web/images',$nomDuFichier);
-         $a->setPhoto($nomDuFichier);
          
         $f= $this->createForm(SalonType::class,$a);
         $f->handleRequest($request);

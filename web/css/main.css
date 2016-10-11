@@ -16,32 +16,42 @@
   background-color: #097168 !important;
   color: #f4a32e;
   font-family: baseBold;
-  font-size: 30px;
-  /*                  opacity: 0.8;*/
-  padding: 45px; }
+  font-size: 23px; }
 
+@media screen and (max-width: 990px) {
+  .navbar-default {
+    font-weight: bold;
+    font-size: 15px; } }
 .nav-link {
   color: #f4a32e !important; }
 
 .nav1 {
   border: 0px; }
 
-.navbar-default.bigcontent {
-  font-size: 25px;
-  padding: 0px;
-  background-color: white;
-  opacity: 1;
-  transition: all 0.5s ease-in-out; }
+/*.navbar-default.bigcontent{ // Bar de nav
 
-.navbar-default > :first-child {
-  padding: 0px;
-  display: flex;
-  float: right;
-  width: 10px;
-  justify-content: space-around;
-  margin: 2%;
-  list-style: none; }
+                            font-size: 25px;
+                            padding: 0px;
+                            background-color: white;
+                            opacity: 1 ;
 
+                            transition: all 0.5s ease-in-out;
+
+
+
+}
+
+
+.navbar-default > :first-child{ // Bouton menu 
+                                padding: 0px;
+                                display: flex ;
+                                float: right;
+                                width: 10px;
+                                justify-content: space-around;
+                                margin: 2%;
+                                list-style: none;
+
+}*/
 ul.nav.navbar-nav {
   float: right; }
 
@@ -84,13 +94,13 @@ img.logoNav {
   position: absolute;
   top: -5px; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   .navbar-collapse.collapse {
     display: none !important; }
 
   .bigcontent .navbar-collapse.collapse {
     display: block !important; } }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 920px) {
   .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
     padding-right: 0;
     padding-left: 0; }

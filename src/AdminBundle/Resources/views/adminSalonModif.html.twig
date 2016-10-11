@@ -9,12 +9,13 @@
 
         {{form_start(formSalon,{'attr':{'action':path('modifSalon',{'id':id})}})}}
         
+        {{ form_widget(formSalon.nom) }}
+        {{ form_widget(formSalon.prix) }}
+        {{ form_widget(formSalon.type) }}
+      
         
-
-        {{form_end(formSalon)}}
-
-
-
+        
+     {{ form_widget(formSalon.Valider)}}
 
     </body>
 
