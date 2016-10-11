@@ -25,19 +25,21 @@
 
     {% if is_granted("ROLE_ADMIN") %}
 
-        <a href="{{path("loginOut")}}">se déconnecter</a>
+        <a href="{{path("loginOut")}}">Se Déconnecter</a>
     {% else %}
     
-    
-        <div class="thumbnail"> 
-            <div class="container">
+        
+        <div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Bienvenue</h2>   
             <form action="{{path('loginCheck')}}" method="post">
                 <input type="text" id="username" name="_username" placeholder="Nom d'utilisateur" value=""/>
                 <input type="password" id="password" name="_password" placeholder="Mot de passe" value=""/>
-                <button type="submit" id="login-button" value="se connecter"/>Login</button>
+                <input type="submit" value="se connecter"/>
             </form>
         </div>
-        </div>
+       
     
             {% endif %}
 {% endblock %}
