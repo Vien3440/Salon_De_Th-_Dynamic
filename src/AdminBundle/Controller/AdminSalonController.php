@@ -62,7 +62,47 @@ class AdminSalonController extends Controller {
         $em->flush();
         return $this->redirect($this->generateUrl('adminSalon'));
     }
-
+    
+    
+  // Modif 
+    /**
+     * @Route("admin/salon/edit/{id}",name="editSalon")
+     * @Template("AdminBundle::adminSalonModif.html.twig")
+     * 
+     */
+    public function editSalon($id,Salon $a){
+        
+        return array("formSalon" => $this->createForm(SalonType::class, $a)->createView(),'id'=>$id);
+        
+        
+        
+    }
+    
+     
+   /**
+    * @Route("admin/salon/update/{id}",name="modifSalon")
+    */
+   public function  uptdateSalon(Request $request , $id){
+        $a = new Salon();
+        $em = $this->getDoctrine()->getManager();
+        $a = $em->find("AdminBundle:Salon", $id);
+        
+         $nomDuFichier = md5(uniqid()).'.'.$a->getPhoto()->getClientOriginalExtension();
+         $a->getPhoto()->move('../web/images',$nomDuFichier);
+         $a->setPhoto($nomDuFichier);
+         
+        $f= $this->createForm(SalonType::class,$a);
+        $f->handleRequest($request);
+        
+//        if($f->isValid())
+//        {
+//        
+            
+        $em->merge($a);
+        $em->flush();
+//        }
+        return $this->redirect($this->generateUrl('adminSalon'));
+   }
         
     }
     

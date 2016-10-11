@@ -1,15 +1,14 @@
 security:
     
-    role_hierarchy:
-        ROLE_ADMIN: ROLE_USER
         
     providers:
         in_memory:
             memory: 
                 users:
                     admin:
-                        password: 12345
+                        password: admin
                         roles: 'ROLE_ADMIN'
+            
     firewalls:
         
         dev:
@@ -23,25 +22,20 @@ security:
             form_login:
                 check_path: loginCheck
                 login_path: login
+                default_target_path: /login
             logout:
                 path: loginOut
-                target: /
-                
-        admin:
-            pattern: ^/admin
-            anonymous: false
-            provider: in_memory
-            # le formulaire de login pour que symfony sache où il campe
-            form_login:
-                check_path: loginCheck
-                login_path: login
-            logout:
-                path: loginOut
-                target: /
-                
+                target: /login
+       
+    
     encoders:
-        Symfony\Component\Security\Core\User\User:  plaintext
+        Symfony\Component\Security\Core\User\User: plaintext
         AppBundle\Entity\User:
             algorithm: plaintext
-            ignore_case: false     
-   
+            ignore_case: false       
+            
+    access_control:   
+        # Un admin ou un user classique peut ajouter une annonce ... quelque chose d'étrange est ici ....
+        - { path: ^/admin, roles: [ROLE_ADMIN , ROLE_USER] }       
+             
+            

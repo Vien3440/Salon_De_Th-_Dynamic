@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ asset('./css/main.css')}}"> 
         {% block stylesheets %}{% endblock %}
     {% endblock %}  
-
+    <body>
     {% block body %}
     {% block nav %}  {# Nav bar par default #}
         <nav class="nav1 navbar navbar-default navbar-fixed-top">
@@ -21,6 +21,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{path('patisserie')}}">Gateaux</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{path('login')}}">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{path('resto')}}">Restauration</a></li>
+                    
                 </ul>
             </header>
             <ul class="contact">
@@ -38,5 +39,5 @@
          
     {% endblock %}
 
-
+</body>
 </html>

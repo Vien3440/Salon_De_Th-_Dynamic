@@ -20,7 +20,7 @@ class SalonType extends AbstractType
         $builder
             ->add('nom')
             ->add('prix')
-            ->add('photo',FileType::class)
+            ->add('photo',FileType::class,array('data_class' => null))
             ->add('type')
             ->add('Valider',SubmitType::class)
         ;

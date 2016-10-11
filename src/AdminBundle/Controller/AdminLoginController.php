@@ -40,6 +40,7 @@ class AdminLoginController extends Controller {
     public function check() {
         throw new Exception('Verifiez votre fichier security');
     }
+    
     /**
      * 
      * @Route("/loginOut",name="loginOut")

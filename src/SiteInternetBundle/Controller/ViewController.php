@@ -16,11 +16,11 @@ class ViewController extends Controller
      */
     public function getHome()
     {
-        return ;
+        return array(null);
     }
     
     /**
-     * @Route("salon",name="salon")
+     * @Route("/salon",name="salon")
      * @Template("SiteInternetBundle::salondethe.html.twig")
      */
     public function getSalon() {

@@ -4,15 +4,22 @@
         <meta charset="utf-8">
         <title>Administration:Ajout</title>
     <h2>Ajouter du Contenu</h2>
-   {# <form action="http://merdia" enctype="multipart/from-data">
-        
-    </form>#}
-        {{form_start(formNews,{'attr':{'action':path('valid'),'enctype':'multipart/form-data'}})}}
-            
-        {{form_end(formNews)}}
-    </head>
-    <body>
+    {# <form action="http://merdia" enctype="multipart/from-data">
+         
+     </form>#}
 
-    </body>
+    {% if id is defined %}
+        {{form_start(formNews,{'attr':{'action':path('valid'),'enctype':'multipart/form-data'}})}}
+        {{ form_row(form.prix) }} 
+        {{form_end(formNews)}}
+    {%else%}
+        {{form_start(formNews,{'attr':{'action':path('valid'),'enctype':'multipart/form-data'}})}}
+        {{form_end(formNews)}}
+
+    {% endif %}
+</head>
+<body>
+
+</body>
 
 </html>
