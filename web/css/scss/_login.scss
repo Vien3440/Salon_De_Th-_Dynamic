@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
-
+#logout{
+    line-height: 30;
+}
 .login {
+  padding-top: 150px;
   width: 400px;
   margin: 16px auto;
   font-size: 16px;
@@ -20,11 +23,11 @@
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: #097168;
 }
 
 .login-header {
-  background: #28d;
+  background: #097168;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -67,7 +70,7 @@
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #097168;
   border-color: transparent;
   color: #fff;
   cursor: pointer;

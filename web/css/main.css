@@ -137,7 +137,7 @@ body {
         box-shadow: -2px 4px 22px 11px rgba(0, 0, 0, 0.34);
         text-align: center;
         margin-top: 50%;
-        width: 200px;
+        width: 270px;
         margin: auto;
         font-family: base; }
         body #contHome #tof div img {
@@ -175,7 +175,11 @@ body {
   margin-top: 10px;
   background-color: #ffcc88; }
 
+#logout {
+  line-height: 30; }
+
 .login {
+  padding-top: 150px;
   width: 400px;
   margin: 16px auto;
   font-size: 16px; }
@@ -192,10 +196,10 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d; }
+  border-bottom-color: #097168; }
 
 .login-header {
-  background: #28d;
+  background: #097168;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -232,7 +236,7 @@ body {
   border-color: #888; }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #097168;
   border-color: transparent;
   color: #fff;
   cursor: pointer; }
