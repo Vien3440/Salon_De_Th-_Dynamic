@@ -166,8 +166,10 @@ body {
 #thumbnailSalon div div div {
   height: 300px; }
 
-#admiSalon {
-  margin-top: 200px; }
+.admiSalon {
+  margin-top: 200px;
+  text-align: center;
+  margin-bottom: 50px; }
 
 .salonListe {
   display: flex;
@@ -175,9 +177,15 @@ body {
   margin-top: 10px;
   background-color: #ffcc88; }
 
+/*fourtout*/
+.textCenter {
+  text-align: center; }
+
+/*Titre*/
 .headerForm {
   text-align: center;
-  font-family: baseBold; }
+  font-family: baseBold;
+  margin-top: 10%; }
 
 #logout {
   line-height: 30; }

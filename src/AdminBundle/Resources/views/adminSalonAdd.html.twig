@@ -33,8 +33,9 @@
                     {{ form_widget(formNews.type, { 'attr': {'class': 'form-control'} })}}
                 </div>
                 {#////// Valider  #}
-                {{ form_widget(formNews.Valider, { 'attr': {'class': 'form-control'} })}}
+                {{ form_widget(formNews.Valider, { 'attr': {'class': 'form-control btn-success'} })}}
             </div>
-             
-                <a href="{{ path('adminSalon')}}" class="btn btn-danger" role="button"> Retour </a>
+            <div>
+                <a href="{{ path('adminSalon')}}" class="btn btn-danger col-xs-offset-3 col-xs-6 col-xs-offset-3" role="button"> Retour </a>
+            </div>     
    {% endblock %}
