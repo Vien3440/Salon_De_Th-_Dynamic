@@ -6,16 +6,18 @@
     
     {% block corp %}
         <h2 id="admiSalon">Liste des Plats</h2>
-        <a href="{{ path('adminRestoAdd')}}"> Ajout </a>
+        <a href="{{ path('adminRestoAdd')}}" class="btn btn-default" role="button"> Ajouter </a>
         <div id="salonListeBox">
         {% for Resto in resto %}
-         <div class="salonListe">
+            <div class="col-sm-6 col-lg-4 col-md-4">
+         <div class="thumbnail">
              <img src="{{asset('../web/images/')~Resto.Photo}}">
            <p>{{Resto.Nom}}</p>
            <p>{{Resto.Prix}}</p>
            <p>{{Resto.Type}}</p>
            <div>
-               <a href=" {{ path('suprResto', {'id':Resto.id})}}">Supprimer</a>
+               <a href="{{ path('adminRestoAdd',{'id':Resto.id})}}" class="btn btn-success" role="button">Modifier</a>
+               <a href=" {{ path('suprResto', {'id':Resto.id})}}" class="btn btn-danger" role="button">Supprimer</a>
            </div>
          </div>
         </div>
