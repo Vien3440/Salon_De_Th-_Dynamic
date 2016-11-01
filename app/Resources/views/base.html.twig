@@ -35,8 +35,8 @@
                 {% if is_granted("ROLE_ADMIN") == false %}
                     <ul class="contact">
                         <a class="nav-link" href="{{path('home')}}"><img id="logo" src="./../images/large_fun-in-the-sun-title.png" alt="logo"></a>
-                        <li>0612345678</li>
-                        <li>Rue de la liberation</li>
+                        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> 0612345678</li>
+                        <li><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  Rue de la paix</li>
                     </ul>
                 {% endif %}
             </nav>

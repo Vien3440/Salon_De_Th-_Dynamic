@@ -23,11 +23,11 @@
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #097168;
+  border-bottom-color: $color4;
 }
 
 .login-header {
-  background: #097168;
+  background: $color4;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -70,7 +70,7 @@
 }
 
 .login input[type="submit"] {
-  background: #097168;
+  background: $color4;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
