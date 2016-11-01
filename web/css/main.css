@@ -175,6 +175,10 @@ body {
   margin-top: 10px;
   background-color: #ffcc88; }
 
+.headerForm {
+  text-align: center;
+  font-family: baseBold; }
+
 #logout {
   line-height: 30; }
 
