@@ -1,22 +1,44 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Doctyrine News</title>
-    </head>
-    <body>
-        <h2>Page modif</h2>
+{% extends "base.html.twig" %}
 
-        {{form_start(formSalon,{'attr':{'action':path('modifSalon',{'id':id})}})}}
-        
-        {{ form_widget(formSalon.nom) }}
-        {{ form_widget(formSalon.prix) }}
-        {{ form_widget(formSalon.type) }}
-      
-        
-        
-     {{ form_widget(formSalon.Valider)}}
 
-    </body>
+{% block body %}{{parent()}}{% endblock %}
+    {% block nav %}{% endblock %}
+    
+    {% block corp %}
+ <h1 class="lienajout">modif Coke</h1>
+                 <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2 col-sm-offset-1 col-sm-10 col-sm-offset-1 ">
 
-</html>
+       
+            <div >
+     {{form_start(formSalon,{'attr':{'action':path('modifSalon',{'id':id})}})}}
+     
+     
+        <div class="">
+                {#////// Nom  #}  
+                <div class="input-group formEvent">
+                    <span class="input-group-addon" >Nom</span>
+                    {{ form_widget(formSalon.nom, { 'attr': {'class': 'form-control'} })}} {# Class Botstrap #}
+                </div>
+                {#////// Prix  #} 
+                <div class="input-group formEvent">
+                    <span class="input-group-addon" >Prix</span>
+                    {{ form_widget(formSalon.prix, { 'attr': {'class': 'form-control'} })}}
+                </div>
+                {#////// Photo  #} 
+                <div class="input-group formEvent">
+                    <span class="input-group-addon" >Photo</span>
+                    {{ form_widget(formSalon.photo, { 'attr': {'class': 'form-control'} })}}
+                </div>
+                {#////// Description  #}
+                <div class="input-group formEvent">
+                    <span class="input-group-addon" >Description</span>
+                    {{ form_widget(formSalon.type, { 'attr': {'class': 'form-control'} })}}
+                </div>
+                {#////// Valider  #}
+                {{ form_widget(formSalon.Valider, { 'attr': {'class': 'form-control'} })}}
+
+     {{form_end(formSalon)}}
+            </div>
+            </div>
+  
+     {% endblock %}

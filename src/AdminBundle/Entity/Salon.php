@@ -40,7 +40,7 @@ class Salon
     /**
      * @var UploadedFile
      *
-     * @ORM\Column(name="Photo", type="string", length=255)
+     * @ORM\Column(name="Photo", type="string", length=255,nullable=false)
      * @File(mimeTypes={"image/jpg"})
      */
     private $photo;

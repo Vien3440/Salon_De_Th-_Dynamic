@@ -5,7 +5,10 @@ namespace SiteInternetBundle\Controller;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class ViewController extends Controller
 {
@@ -38,17 +41,36 @@ class ViewController extends Controller
     }
     
     
-    
+   
+/////////Formulaire Contact
     /**
-     * @Route("/patisserie",name="patisserie")
-     * @Template("SiteInternetBundle::patisserie.html.twig")
+     * @Route("conta",name="conta")
+     * @Template("SiteInternetBundle::contact.html.twig")
      */
-    public function getPati() {
+  public function indexAction(Request $request)
+{
         
-    }
+      if ($request->getMethod()=='POST')
+      {
+          $nom = $_POST['nom'];
+          $email = $_POST['email'];
+          $corp = $_POST['corp'];
+          
+    $message = Swift_Message::newInstance()
+        ->setSubject($nom)
+        ->setFrom($email)
+        ->setTo('leboloc@gmail.com')
+        ->setBody($corp);
+                    
+    $this->get('mailer')->send($message);
+
+    return $this->render('SiteInternetBundle::contact.html.twig');
+}
+}
+    
     
     /**
-     * @Route("/resto",name="resto")
+     * @Route("/patisserie",name="resto")
      * @Template("SiteInternetBundle::restauration.html.twig")
      */
     public function getRestauration() {
