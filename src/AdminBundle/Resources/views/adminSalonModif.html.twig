@@ -5,11 +5,11 @@
     {% block nav %}{% endblock %}
     
     {% block corp %}
- <h1 class="lienajout">modif Coke</h1>
+ <h1 class="lienajout headerForm">Modification Cocktail / Thé</h1>
                  <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2 col-sm-offset-1 col-sm-10 col-sm-offset-1 ">
 
        
-            <div >
+        
      {{form_start(formSalon,{'attr':{'action':path('modifSalon',{'id':id})}})}}
      
      
@@ -36,9 +36,10 @@
                 </div>
                 {#////// Valider  #}
                 {{ form_widget(formSalon.Valider, { 'attr': {'class': 'form-control'} })}}
-
+                 </div>
      {{form_end(formSalon)}}
-            </div>
-            </div>
+      <a href="{{ path('adminSalon')}}" class="btn btn-danger" role="button"> Retour </a>
+           
+           
   
      {% endblock %}
