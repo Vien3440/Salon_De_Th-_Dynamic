@@ -69,4 +69,54 @@ class AdminRestaurationController extends Controller{
         $em->flush();
         return $this->redirect($this->generateUrl('adminResto'));
     }
+    
+    // Modif  1 Vue+Form
+    /**
+     * @Route("admin/resto/edit/{id}",name="editResto")
+     * @Template("AdminBundle::adminRestoModif.html.twig")
+     * 
+     */
+    public function editSalon($id,Resto $a){
+                
+        return array("formResto" => $this->createForm(RestoType::class,$a)->createView(),'id'=>$id,);
+        
+        
+        
+    }
+    
+//////    Modif 2 validation + envoi 
+    /**
+     * @Route("admin/resto/update/{id}",name="modifResto")
+     */
+    public function uptdateSalon(Request $request, $id) {
+        $em = $this->getDoctrine()->getManager();  // initialisation Entity manager
+       
+////// Sauvgarde ArticleImage de l'entity en DB 
+        $aImg = $em->find("AdminBundle:Resto", $id);
+        $image_courante = $aImg->getPhoto();
+        
+        if ($request->getMethod() == 'POST') {
+            $a = new Resto();
+
+
+            $a = $em->find("AdminBundle:Resto", $id);
+            $f = $this->createForm(RestoType::class, $a);
+            $f->handleRequest($request);
+
+            if ($a->getPhoto() == null) { //Si on ne veut pas changer d'image
+                $a->setPhoto($image_courante); //On laisse l'ancienne image
+            }else{ //Sinon on change l'image 
+                 $nomDuFichier = md5(uniqid()) . '.' . $a->getPhoto()->getClientOriginalExtension();
+                $a->getPhoto()->move('../web/images', $nomDuFichier);
+                $a->setPhoto($nomDuFichier);
+            }
+
+            $em->merge($a);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('adminResto'));
+        }
+    }
+
+    
 }

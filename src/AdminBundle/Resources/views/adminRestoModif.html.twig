@@ -5,15 +5,16 @@
     {% block nav %}{% endblock %}
     
     {% block corp %}
- <h1 class="lienajout headerForm">Ajouter Plat</h1>
+ <h1 class="lienajout headerForm">Modification Plat</h1>
                  <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2 col-sm-offset-1 col-sm-10 col-sm-offset-1 ">
 
        
-           
-        {{form_start(formResto,{'attr':{'action':path('validResto'),'enctype':'multipart/form-data'}})}}
-            
-          <div>
-                        {#////// Nom  #}  
+        
+     {{form_start(formResto,{'attr':{'action':path('modifResto',{'id':id})}})}}
+     
+     
+        <div class="">
+                {#////// Nom  #}  
                 <div class="input-group formEvent">
                     <span class="input-group-addon" >Nom</span>
                     {{ form_widget(formResto.nom, { 'attr': {'class': 'form-control'} })}} {# Class Botstrap #}
@@ -35,7 +36,10 @@
                 </div>
                 {#////// Valider  #}
                 {{ form_widget(formResto.Valider, { 'attr': {'class': 'form-control'} })}}
-            </div>
-             
-                <a href="{{ path('adminResto')}}" class="btn btn-danger" role="button"> Retour </a>
-        {% endblock %}
+                 </div>
+     {{form_end(formResto)}}
+      <a href="{{ path('adminResto')}}" class="btn btn-danger" role="button"> Retour </a>
+           
+           
+  
+     {% endblock %}

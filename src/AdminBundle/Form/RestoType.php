@@ -18,7 +18,7 @@ class RestoType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('photo',FileType::class,array('data_class' => null))
+            ->add('photo',FileType::class,array('data_class' => null,'required' => false))
             ->add('prix')
             ->add('type')
             ->add('Valider',SubmitType::class)

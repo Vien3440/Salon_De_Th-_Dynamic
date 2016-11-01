@@ -16,7 +16,7 @@
            <p>{{Resto.Prix}}</p>
            <p>{{Resto.Type}}</p>
            <div>
-               <a href="{{ path('adminRestoAdd',{'id':Resto.id})}}" class="btn btn-success" role="button">Modifier</a>
+               <a href="{{ path('editResto',{'id':Resto.id})}}" class="btn btn-success" role="button">Modifier</a>
                <a href=" {{ path('suprResto', {'id':Resto.id})}}" class="btn btn-danger" role="button">Supprimer</a>
            </div>
          </div>
